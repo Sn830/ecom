@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ecommerceclone.com</title>
+    <style>
+      .header {
+        display: flex;
+        flex-direction:row;
+        margin-left: 40px;
+        background-color: white;
+        height: 60px;
+        margin-bottom: 50px;
+      }
+
+      .left-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 5px;
+      }
+      .menu-icon {
+        height: 50px;
+      }
+
+      .mega-mart {
+        color: rgb(4, 92, 255);
+        font-size: 30px;
+        font-weight: bold;
+        margin-left: 20px;
+      }
+
+      .middle-header {
+        margin-left: 150px;
+        display: flex;
+        align-items: center;
+        align-items: top;
+        margin-top: 5px;
+      }
+
+      .search-bar {
+        border: 3px solid  rgb(4, 92, 255);;
+        height: 50px;
+        width: 500px;
+        margin-right: -1px;
+        padding-left: 15px;
+      }
+
+      .search-bar::placeholder {
+        font-size: 20px;
+      }
+      .search-side-button {
+        height: 49px;
+        margin-left: -1px;
+        border: 1px solid  rgb(4, 92, 255);;
+      }
+      .div-side-button {
+        background-color: rgb(4, 92, 255);
+      }
+
+      .right-header {
+        display: flex;
+        flex-direction: row;
+        margin-left: 100px;
+        margin-top: 5px;
+        align-items: center;
+        margin-top: 5px;
+        margin-right: 40px;
+      }
+
+      .user-login {
+        height: 60px;
+      }
+      .add-to-cart {
+        height: 90px;
+        margin-top: 5px;
+      }
+      .div-login, .div-cart {
+        display: flex;
+        flex-direction: row;
+      }
+      .text-login {
+        margin-top: 20px; 
+        font-size: 18px;
+        color: rgb(4, 92, 255);
+        font-weight: bold; 
+        margin-left: 10px;
+      }
+      .text-cart {
+        margin-top: 35px; 
+        margin-left: 0;
+        font-size: 18px;
+        color: rgb(4, 92, 255);
+        font-weight: bold;
+      }
+
+      .design1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+
+      .section-item {
+        padding: 20px 40px;
+        border-radius: 30px;
+        border: none;
+        font-size: 17px;
+        transition: background-color 0.15s;
+      }
+
+      .section-item:hover {
+        background-color:  rgb(4, 92, 255);;
+      }
+      .section-item:active {
+        opacity: 0.8;
+      }
+
+      .design2 {
+        margin-top: 30px;
+        height: 360px;
+        background-color: rgb(10, 10, 49);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .design2-1 {
+        margin-left: 20px;
+      }
+
+      .product, .discount {
+        color: white;
+        font-weight: bolder;
+        font-size: 15px;
+      }
+      .discount {
+        margin-bottom: 10px;
+      }
+      .deal-des {
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        color: white;
+      }
+
+      .product-detail {
+        color: rgb(255, 239, 239);
+        margin-bottom: 10px;
+      }
+
+      .image-1 {
+        height: 150px;
+      }
+      .image-2 {
+        height: 200px; 
+      }
+
+      .image-3 {
+        height: 200px;
+        width: 650px;
+        margin-right: 20px;
+      }
+      
+
+      .bank-logo {
+        height: 40px;
+        margin-right: 10px;
+       
+      }
+
+      .bank-offers {
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 5px;
+        left: 400px;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      .bank-discount {
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      .offer {
+        color: rgb(99, 91, 91);
+        font-size: small;
+      }
+
+
+      .design3 {
+        height: 200px;
+        margin-left: 40px;
+        margin-right: 40px;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: rgb(228, 228, 228);
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(228, 228, 228);
+        padding: 30px 30px;
+        background-color: rgb(228, 228, 228);
+        margin-bottom: 20px;
+      }
+      
+      .product-icon {
+        height: 150px;
+      }
+
+      .deal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .offer-details {
+        display: inline-block;
+        margin-bottom: 25px;
+        font-size: 22px;
+        border-bottom: 3px solid rgb(4, 92, 255);
+      }
+      .hilight1 {
+        color:  rgb(4, 92, 255);
+        font-weight: bold;
+        font-size: 25px;
+      }
+      .design3-1 {
+        transition: transform 0.15s;
+        position: relative;
+      }
+      .design3-1:hover img {
+        transform: scale(1.3);;
+        background-color: transparent;
+      }
+      .discount-percentage {
+        position: absolute;
+        background-color: rgb(4, 92, 255);
+        top: -12px;
+        right: -15px;
+        font-weight: bold;
+        padding: 3px 3px;
+      }
+
+      .design4 {
+        height: 170px;
+        margin-left: 40px;
+        margin-right: 40px;
+        border-top-width: 1px;
+        border-top-style: solid;
+        border-top-color: rgb(228, 228, 228);
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(228, 228, 228);
+        padding: 30px 30px;
+        background-color: rgb(228, 228, 228);
+        margin-bottom: 50px;
+      }
+
+      .product-icon1 {
+        height: 100px;
+      }
+
+      .design5 {
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+
+      .design5-1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .icon-sectionwise {
+        height: 200px;
+        width: 200px;
+        border-radius: 70px;
+      }
+
+      .section-name {
+        margin-left: 65px;
+        margin-top: 5px;
+        font-size: 18px;
+      }
+
+      .design6 {
+        height: 400px;
+        background-color: rgb(4, 92, 255);
+        position: relative;
+        color: white;
+      }
+      .mall-name {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 5px;
+      }
+
+      .details_On_mall {
+        margin-bottom: 10px;
+        line-height: 25px;
+      }
+      .download {
+        font-size: 15px;
+      }
+
+      .download_from {
+        height: 40px;
+        width: 100px;
+        margin-right: 10px;
+      }
+      .mall_details {
+        position: absolute;
+        left: 100px;
+        top: 30px;
+      }
+      .appstore {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .catagory-available {
+        position: absolute;
+        left: 500px;
+        top: 30px;
+        line-height: 40px;
+      }
+      .shop-for {
+        border-bottom-width: 1px;
+        border-bottom-color: white;
+        border-bottom-style: solid;
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+
+      .socialmedia {
+       position: absolute;
+       left: 800px;
+       top: 30px;
+       line-height: 40px;
+      }
+
+      .follow-us {
+        border-bottom-width: 1px;
+        border-bottom-color: white;
+        border-bottom-style: solid;
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+
+      .social-icon {
+        height: 40px;
+        margin-bottom: 20px;
+        margin-right: 8px;
+        margin-top: 5px;
+      }
+
+      .social-link {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .detail-extra {
+        position: absolute;
+        bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        left: 400px;
+        
+      }
+
+      .all-details {
+        border-bottom-width: 2px;
+        border-bottom-color: white;
+        border-bottom-style: solid;
+        padding-bottom: 300px;
+      }
+      
+      .about {
+        margin-right: 10px;
+      }
+
+      .copyrigt {
+        position: absolute;
+        bottom: 20px;
+        left: 500px;
+        margin-top: 20px;
+      }
+
+      .design7 {
+        position: relative;
+        height: 500px;
+       
+      }
+
+      .delivery-boy {
+        width: 600px;
+        
+      }
+
+      .delivery-icon {
+        position: absolute;
+        left: 10px;
+        top: 20px;
+      }
+
+      .delivery-offer {
+        position: absolute;
+        left: 570px;
+        top: 100px;
+      }
+
+      .free-delivery {
+        color: rgb(223, 34, 106);
+        font-size: 40px;
+        font-weight: 900;
+        font-stretch: ultra-expanded;
+        margin-bottom: 20px;
+      }
+
+      .order-offer {
+        font-size: 40px;
+        font-weight: 900;
+        color: rgb(79, 14, 141);
+        font-stretch: ultra-expanded;
+        margin-bottom: 20px;
+      }
+      .delivery-charge-offer {
+        font-size: 20px;
+        font-weight: bolder;
+      }
+
+      .customercare {
+        height: 200px;
+         position: relative;
+        
+      }
+
+      .contact-customercare {
+        font-size: 40px;
+        margin-bottom: 10px;
+        position: absolute;
+        left: 550px;
+      }
+
+      .customercare1 {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        left: 250px;
+        bottom: 50px;
+
+      }
+
+      .email, .cont-number, .whatsapp {
+        padding: 15px 20px;
+        background-color: rgb(228, 228, 228);
+        margin-right: 15px;
+        text-decoration: underline;
+      }
+
+      .email, .whatsapp {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .contact-icon {
+        height: 20px;
+        padding-left: 80px;
+      }
+      
+    </style>
+  </head>
+  <body>
+
+    <div class="header">
+
+      <div class="left-header">
+        <div> <img class="menu-icon" src="icons_ecom/Blue_menu.png"> </div>
+        <div class="mega-mart">MegaMart</div>
+      </div>
+
+      <div class="middle-header">
+        <input class="search-bar" type="text" placeholder="Search Megamart.com">
+        <button class="div-side-button"><img class="search-side-button" src="icons_ecom/hamburger-menu.svg"></button>
+      </div>
+
+      <div class="right-header">
+        <div class="div-login">
+          <div><img class="user-login" src="icons_ecom/Login-logo.png"></div>
+          <div class="text-login">Login/SignUp for new user</div>
+        </div>
+        <div class="div-cart">
+          <div><img class="add-to-cart" src="icons_ecom/cart-ecom.jpeg"></div>
+           <div class="text-cart">Cart</div>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <div class="design1">
+      <div><button class="section-item">Fashion</button></div>
+      <div><button class="section-item">Smart Gadgets</button></div>
+      <div><button class="section-item">Electronics</button></div>
+      <div><button class="section-item">Home & Kitchen</button></div>
+      <div><button class="section-item">Furniture</button></div>
+      <div><button class="section-item">Beauty,Skin Care</button></div>
+      <div><button class="section-item">Toys & Sports</button></div>
+    </div>
+
+    <div class="design2">
+
+        
+        
+        <div class="design2-1">
+
+          <div class="deal-des">
+            Best Deal Online on All appliances
+  
+          </div>
+
+          <div class="product">SMART Gadgets.</div>
+          <div class="discount">UP to 80% OFF</div>
+          <div class="product-detail"> BT Calling | 123 Sports Mode</div>
+
+          <div>
+            <img class="image-1" src="icons_ecom/smart_watch.jpeg" >
+            <img class="image-1" src="icons_ecom/Mobile.jpeg">
+          </div>
+
+        </div>
+  
+        <div>
+          <div class="product">Fashion Wearable</div>
+          <div class="discount">UP to 40% OFF</div>
+          <div class="product-detail"> Dress Up In Stylish Fits This rakhi</div>
+
+          <div>
+            <img class="image-2"  src="icons_ecom/Dress-couple.jpeg">
+          </div>
+
+        </div>
+        
+        <div>
+          <div class="product">Home & Furntiture</div>
+          <div class="discount">UP to 60% OFF</div>
+          <div class="product-detail"> Latest Trend & Styles</div>
+
+          <div>
+            <img class="image-3" src="icons_ecom/Home-furniture.jpeg">
+          </div>
+
+        </div>
+      
+      
+        <div class="bank-offers">
+          <div> <img class="bank-logo" src="icons_ecom/axis-bank.jpeg"> </div>
+          <div> <img class="bank-logo" src="icons_ecom/HDFC.jpeg"> </div>
+          <div> <img class="bank-logo" src="icons_ecom/idfc-bank.png"> </div>
+          <div> <img class="bank-logo" src="icons_ecom/sbi-logo.png"> </div>
+          <div class="bank-discount">10% Instant Discount <span class="offer">T&C apply</span> </div>
+        </div>
+      
+    </div>
+
+    <div class="design3">
+      <div class="offer-details">Grab The Best Deals on <span class="hilight1"> ||SmartPhones </span></div>
+
+      <div class="deal">
+
+        <div class="design3-1"> 
+          <button> <img class="product-icon" src="icons_ecom/iphone.webp"> </button>
+          <div class="discount-percentage">30%off</div>
+        </div>
+
+        <div class="design3-1"> 
+          <button> <img class="product-icon" src="icons_ecom/oppo.webp"> </button> 
+          <div class="discount-percentage">20%off</div>
+        </div>
+
+        <div class="design3-1"> 
+          <button> <img class="product-icon" src="icons_ecom/realme.webp"> </button> 
+          <div class="discount-percentage">40%off</div>
+        </div>
+
+        <div class="design3-1"> 
+          <button> <img class="product-icon" src="icons_ecom/samsung-phone.webp"> </button>
+          <div class="discount-percentage">20%off</div>
+         </div>
+
+        <div class="design3-1"> 
+          <button> <img class="product-icon" src="icons_ecom/vivo.webp"> </button> 
+          <div class="discount-percentage">60%off</div>
+        </div>
+
+        <div class="design3-1"> 
+          <button> <img class="product-icon" src="icons_ecom/pixel-phone.webp"> </button>
+          <div class="discount-percentage">20%off</div>
+         </div>
+
+      </div>
+
+    </div>
+
+    <div class="design4">
+
+      <div class="offer-details">Shop From <span class="hilight1"> Top Catagories </span></div>
+
+      <div class="deal">
+
+        <div class="design3-1">
+         <button> <img class="product-icon1" src="icons_ecom/Mobile.jpeg"> </button> 
+        </div>
+
+        <div class="design3-1">
+          <button><img class="product-icon1" src="icons_ecom/Serum.jpeg"></button>
+        </div>
+
+        <div class="design3-1">
+          <button><img class="product-icon1" src="icons_ecom/washing-machine.jpeg"></button>
+        </div>
+
+        <div class="design3-1">
+          <button><img class="product-icon1" src="icons_ecom/sofa.jpeg"></button>
+        </div>
+
+        <div class="design3-1">
+          <button><img class="product-icon1" src="icons_ecom/smart_watch.jpeg"></button>
+        </div>
+
+        <div class="design3-1">
+          <button><img class="product-icon1" src="icons_ecom/Necklace.jpeg"></button>
+        </div>
+
+        <div class="design3-1">
+          <button><img class="product-icon1" src="icons_ecom/Flower-pot.jpeg"></button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="design5">
+
+      <div class="design5-1">
+
+        <div> 
+          <img class="icon-sectionwise" src="icons_ecom/Women.jpeg"> 
+          <div class="section-name">Women</div>
+        </div>
+
+        <div> 
+          <img class="icon-sectionwise" src="icons_ecom/kid.jpeg"> 
+          <div class="section-name">Kids & Infants</div>
+        </div>
+
+        <div> 
+          <img class="icon-sectionwise" src="icons_ecom/men.jpeg"> 
+          <div class="section-name">Men's Fashion</div>
+        </div>
+
+      </div>
+
+      <div class="design5-1">
+         <div> 
+            <img  class="icon-sectionwise" src="icons_ecom/Home and Kitchen.jpeg"> 
+            <div class="section-name">Home & Kitchen</div>
+        </div>
+
+        <div>
+          <img  class="icon-sectionwise" src="icons_ecom/Appliances.jpeg"> 
+          <div class="section-name">Appliances</div>
+        </div>
+
+        <div>
+          <img  class="icon-sectionwise" src="icons_ecom/Travel.jpeg"> 
+          <div class="section-name">Travel</div>
+        </div>
+
+      </div>
+
+      <div class="design5-1">
+
+        <div> 
+          <img  class="icon-sectionwise" src="icons_ecom/Food.jpeg">
+          <div class="section-name">Food</div>
+        </div>
+
+        <div>
+          <img  class="icon-sectionwise" src="icons_ecom/Personal care.jpeg"> 
+          <div class="section-name">Personal Care</div>
+        </div>
+
+        <div> 
+          <img  class="icon-sectionwise" src="icons_ecom/Household care.jpeg"> 
+          <div class="section-name">Household Care</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="design7">
+      <div class="delivery-icon"><img class="delivery-boy" src="icons_ecom/delivery.jpeg"></div>
+      <div class="delivery-offer">
+        <div class="free-delivery">FREE 2 HOURS DELIVERY</div>
+        <div class="order-offer">ON ALL ORDERS ABOVE &#8377;500</div>
+        <div class="delivery-charge-offer">Delivery Charges &#8377;30 only on orders up to &#8377;200</div>
+      </div>
+      
+    </div>
+
+
+
+    <div class="customercare">
+
+      <div class="contact-customercare">Contact Customer Care</div>
+
+      <div class="customercare1">
+
+        <div class="email"> 
+          snigdhasamarath05@gmail.com
+          <div><img class="contact-icon" src="icons_ecom/mail-symbol.png"></div>
+        </div>
+        <div  class="cont-number">
+
+          <div>764580344 <img class="contact-icon" src="icons_ecom/call.jpeg"> </div>
+          <div>(9.00 AM to 6.00 PM Daily)</div>
+          
+        </div>
+        <div class="whatsapp">
+          Reach out to us on Whatsapp
+          <div><img class="contact-icon" src="icons_ecom/whatsapp.jpeg"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="design6">
+
+      <div class="all-details">
+
+        <div class="mall_details">
+
+          <div class="mall-name">Mega Mart</div>
+          <div class="details_On_mall">
+            <div>CIN: U52399HR2008PTC086045</div>
+            <div>Contact: Biju K P (Grievance Officer)</div>
+            <div>Telephone: 0124-4555100</div>
+            <div>Email: customercare@vishalmegamart.com</div>
+            <div class="download"><spsn>Download Our App</spsn></div>
+          </div>
+          
+          <div class="appstore">
+            <div><img class="download_from" src="icons_ecom/Apple store.png"></div>
+            <div><img class="download_from" src="icons_ecom/GooglePlay.png"></div>
+          </div>
+          
+        </div>
+        
+        <div class="catagory-available">
+          <div class="shop-for">SHOP FOR</div>
+          <div>Women | Kids & Infants | Men's Fashion</div>
+          <div>Home & Kitchen | Appliances | Travel </div>
+          <div> Food | Personal Care | Household Care</div>
+        </div>
+  
+        <div class="socialmedia">
+          <div class="follow-us">Follow Us On</div>
+          <div class="social-link">
+            <div><img class="social-icon" src="icons_ecom/facebook-icon.jpeg"></div>
+            <div><img class="social-icon" src="icons_ecom/Instagram.jpeg"></div>
+          </div>
+        </div>
+
+      </div>
+      
+
+      <div class="detail-extra">
+        
+        <div class="about">About Us  |  </div>
+        <div class="about"> Contact Us  |</div>
+        <div class="about">FAQ's | </div>
+        <div class="about"> Returns/Refund |</div>
+        <div class="about">Privacy Policy |</div>
+        <div class="about"> Terms & Conditions </div>
+      </div>
+
+      <div class="copyrigt">Copyright © 2021 Airplaza Retail Holdings Private Limited</div>
+
+    </div>
+
+  </body>
+</html>
